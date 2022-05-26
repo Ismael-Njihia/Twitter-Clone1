@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainSec {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.leftSec {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../Images/defcover.jpg);
+    background-position: right;
+    background-size: cover;
+}
+
+.rightSec {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.myBtn {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.rightSec a {
+    text-align: center;
+}
