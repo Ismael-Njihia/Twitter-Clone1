@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mainSec {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.leftSec {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../Images/defcover.jpg);
+    background-position: right;
+    background-size: cover;
+}
+
+.rightSec {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.myBtn {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.rightSec a {
+    text-align: center;
+}
+
+
+/* Home Page */
+
+.homeSection {
+    display: flex;
+}
+
+.tweetSection {
+    width: 43%;
+    height: 100vh;
+    border-left: 1px rgba(128, 128, 128, 0.168) solid;
+    border-right: 1px rgba(128, 128, 128, 0.168) solid;
+}
+
+.homeLeft {
+    width: 24%;
+    height: 100vh;
+    margin-left: 30px;
+    padding: 30px;
+}
+
+.homeLeft a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.homeLeft button {
+    margin-bottom: 100px;
+}
+
+.homeRight {
+    width: 24%;
+    height: 100vh;
+}
+
+.profilePlaceholder {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: #fff;
+    background-image: url(/images/defcover.jpg);
+    background-size: cover;
+    background-color: #000;
+}
+
+.tweetBox {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.tweetBox input {
+    width: 90%;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+.tweetButtons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px rgba(128, 128, 128, 0.168) solid;
+    font-weight: bold;
+}
+
+.tweetButtons button {
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.topTweetBox {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.homeLeft img {
+    height: 40px;
+}
+
+.homeleft {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.homeLeft button {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.bottomProfileCont {
+    display: flex;
+}
+
+.bottomProfile p {
+    margin: 0;
+    padding: 0;
+}
+
+.bottomProfile {
+    margin-left: 10px;
+}
+
+.bottomProfileCont:hover {
+    background-color: rgba(128, 128, 128, 0.124);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#username {
+    font-weight: bold;
+}
+
+#search {
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: whitesmoke;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+#search placeholder {
+    color: black;
+    text-align: center;
+}
+
+.trending {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    background-color: whitesmoke;
+    height: 90vh;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.coverImage {
+    background-image: url(../Images/top.jpg);
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.mainProfImage {
+    height: 150px;
+    width: 150px;
+    background-image: url(../images/no_bg.png);
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+    left: 370px;
+    z-index: 11;
+    border: 5px solid #fff;
+}
+
+.edtBtn {
+    position: absolute;
+    right: 470px;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+.profContent {
+    position: absolute;
+    top: 350px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#profUserNamed {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#profName {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 23px;
+    font-weight: bolder;
+}
