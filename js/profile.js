@@ -27,15 +27,43 @@ firebase.auth().onAuthStateChanged((user) => {
             //update account
         document.getElementById("saveChanges").onclick = function() {
 
-            var edtName = document.getElementById("edtName").value;
-            var edtBio = document.getElementById("edtBio").value;
+                var edtName = document.getElementById("edtName").value;
+                var edtBio = document.getElementById("edtBio").value;
 
-            //summon firebase
-            firebase.firestore().collection("users").doc(userId).update({
-                userName: edtName,
-                bio: edtBio
-            }).then(() => {
-                window.location.reload();
+                //summon firebase
+                firebase.firestore().collection("users").doc(userId).update({
+                    userName: edtName,
+                    bio: edtBio
+                }).then(() => {
+                    window.location.reload();
+                })
+            }
+            //upload of a profile picture!
+
+        document.getElementById("upload").onclick = function() {
+            let profileImage = document.getElementById("profileImage").files[0];
+            //console.log(profileImage);
+            let storageRef = firebase.storage().ref();
+
+            let uploadTask = storageRef.child("profile/").child(profileImage.name).put(profileImage);
+
+            uploadTask.on('state_changed', (snapshot) => {
+                //progress function
+                let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                let wholeNumber = Math.round(progress);
+                //console.log(progress);
+                document.getElementById("progress").innerText = wholeNumber + "% Uploading";
+
+                if (wholeNumber == 97) {
+                    document.getElementById("progress").innerText = "Uploaded";
+                } else if (wholeNumber == 100) {
+                    document.getElementById("progress").style.display = "none";
+                }
+
+            }, (error) => {
+
+            }, () => {
+
             })
         }
 

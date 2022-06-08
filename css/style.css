@@ -241,3 +241,9 @@
     font-size: 23px;
     font-weight: bolder;
 }
+
+#progress {
+    color: red;
+    text-decoration: none;
+    text-transform: capitalize;
+}

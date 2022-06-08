@@ -90,7 +90,17 @@
                         <h5 class="modal-title" id="exampleModalLabel">Edit Account</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+
+
                     <div class="modal-body">
+                        <div>
+                            <input type="file" id="profileImage">
+                            <button class="btn btn-primary" id="upload">Upload</button>
+                            <div>
+                                <p id="progress"></p>
+                            </div>
+                        </div>
+
                         <label for="">Edit Name</label>
                         <input id="edtName" type="text" class="form-control">
                         <label for="">Edit Bio</label>
@@ -111,6 +121,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
 
     <script src="Js/config.js"></script>
     <script src="Js/profile.js"></script>
