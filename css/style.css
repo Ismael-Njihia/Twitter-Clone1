@@ -49,6 +49,7 @@
     height: 100vh;
     border-left: 1px rgba(128, 128, 128, 0.168) solid;
     border-right: 1px rgba(128, 128, 128, 0.168) solid;
+    overflow-y: scroll;
 }
 
 .homeLeft {

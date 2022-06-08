@@ -46,10 +46,13 @@ firebase.auth().onAuthStateChanged((user) => {
                 document.getElementById("username").innerText = username;
             })
             //
-        firebase.firestore().collection("tweets").orderBy("timeStamp", "desc").get().then((snapshot) => {
-            snapshot.docs.forEach((doc) => {
-                const userId = doc.data().userId;
-                const username = doc.data().userName;
+        firebase.firestore().collection("users").get().then((usersnapshot) => {
+            usersnapshot.forEach((theUser) => {
+                let userId = theUser.data().userId;
+                let userName = theUser.data().userName;
+
+                //
+
 
                 if (userId == userId) {
 
@@ -66,7 +69,7 @@ firebase.auth().onAuthStateChanged((user) => {
                             content += '<div class="profilePlaceholder"></div>';
                             content += '<div style="margin-left:20px;">';
                             content += '<div class="d-flex">';
-                            content += '<h6 style="margin-top:0px";>' + username + '</h6>';
+                            content += '<h6 style="margin-top:0px";>' + userName + '</h6>';
                             content += '<p style="margin-bottom:0px; margin-left:10px;">' + theDate + '</p>';
                             content += '</div>';
                             content += '<p style="margin-top:0px;">' + theTweet + '</p>';
