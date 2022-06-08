@@ -53,17 +53,22 @@ firebase.auth().onAuthStateChanged((user) => {
 
                 //
 
+                firebase.firestore().collection("tweets").orderBy("timeStamp", "desc").get().then((querySnapshot) => {
+                    let content = "";
+                    querySnapshot.forEach((doc) => {
 
-                if (userId == userId) {
 
-                    firebase.firestore().collection("tweets").get().then((querySnapshot) => {
-                        let content = "";
-                        querySnapshot.forEach((doc) => {
-                            const theTweet = doc.data().usertweet;
-                            const theTime = doc.data().timeStamp;
+                        const theTweet = doc.data().usertweet;
+                        const theTime = doc.data().timeStamp;
+                        const theUserId = doc.data().userId;
 
-                            const theDate = theTime.toDate().toDateString();
+                        const theDate = theTime.toDate().toDateString();
 
+                        //now
+                        // const currentTime = new Date();
+                        // const tweetDate = theTime.toDate().toDateString();
+
+                        if (theUserId == userId) {
                             content += '<div class="d-flex" style="border-bottom: 1px solid gray; margin-top:20px; padding-left:30px; padding-right:30px;">';
 
                             content += '<div class="profilePlaceholder"></div>';
@@ -76,12 +81,12 @@ firebase.auth().onAuthStateChanged((user) => {
                             content += '<div id="bottomtweet" class="d-flex"> <p <i class="bi bi-chat"></i> <p <i class="bi bi-arrow-clockwise"></i> <p <i class="bi bi-heart"></i></P></div>';
                             content += '</div>';
                             content += '</div>';
+                        }
 
-
-                        })
-                        $("#allTweetsContainer").append(content);
                     })
-                }
+                    $("#allTweetsContainer").append(content);
+                })
+
             })
         })
 

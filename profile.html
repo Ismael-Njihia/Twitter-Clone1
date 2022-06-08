@@ -35,12 +35,13 @@
             <button class="btn btn-primary">Tweet</button>
             <br>
             <br>
+
             <div class="bottomProfileCont">
                 <div class="bottomProfileCont">
                     <div class="profilePlaceholder">
                         <div class="bottomProfile">
                             <p id="username"></p>
-                            <p>username</p>
+                            <p id="username"></p>
                         </div>
                     </div>
                 </div>
@@ -53,10 +54,10 @@
                 <h5 id="test"> </h5>
             </div>
 
-            <div class="coverImage">
+            <div class="coverImage" id="coverImage">
 
             </div>
-            <div class="mainProfImage"></div>
+            <div class="mainProfImage" id="mainProfImage"></div>
 
             <a class="edtBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Profile</a>
 
@@ -95,12 +96,17 @@
                     <div class="modal-body">
                         <div>
                             <input type="file" id="profileImage">
-                            <button class="btn btn-primary" id="upload">Upload</button>
+                            <button class="btn btn-primary" id="upload" style="margin-top: 10px;">Upload profile Image</button>
                             <div>
                                 <p id="progress"></p>
                             </div>
-                        </div>
 
+                            <input type="file" id="coverImage">
+                            <button class="btn btn-primary" id="uploadCover" style="margin-top: 10px;">Upload Cover Image</button>
+                            <div>
+                                <p id="progressCover"></p>
+                            </div>
+                        </div>
                         <label for="">Edit Name</label>
                         <input id="edtName" type="text" class="form-control">
                         <label for="">Edit Bio</label>
