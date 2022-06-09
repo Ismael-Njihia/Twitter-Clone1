@@ -61,6 +61,7 @@ firebase.auth().onAuthStateChanged((user) => {
                         const theTweet = doc.data().usertweet;
                         const theTime = doc.data().timeStamp;
                         const theUserId = doc.data().userId;
+                        let docId = doc.data().docId;
 
                         const theDate = theTime.toDate().toDateString();
 
@@ -73,12 +74,15 @@ firebase.auth().onAuthStateChanged((user) => {
 
                             content += '<div class="profilePlaceholder"></div>';
                             content += '<div style="margin-left:20px;">';
+                            content += '<div class="d-flex" style="justify-content: space-between; width: 100%">';
                             content += '<div class="d-flex">';
                             content += '<h6 style="margin-top:0px";>' + userName + '</h6>';
                             content += '<p style="margin-bottom:0px; margin-left:10px;">' + theDate + '</p>';
                             content += '</div>';
+                            content += '<img src="../Login-page/images/more.svg" class="moreImage" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="viewTweet(\'' + docId + '\')">';
+                            content += '</div>';
                             content += '<p style="margin-top:0px;">' + theTweet + '</p>';
-                            content += '<div id="bottomtweet" class="d-flex"> <p <i class="bi bi-chat"></i> <p <i class="bi bi-arrow-clockwise"></i> <p <i class="bi bi-heart"></i></P></div>';
+
                             content += '</div>';
                             content += '</div>';
                         }
@@ -88,6 +92,15 @@ firebase.auth().onAuthStateChanged((user) => {
                 })
 
             })
+
+            window.viewTweet = function(value) {
+                document.getElementById("deleteTweet").onclick = function() {
+                    firebase.firestore().collection("tweets").doc(value).delete().then(() => {
+                        window.location.reload();
+                        alert("Tweet deleted successfully");
+                    })
+                }
+            }
         })
 
     } else {

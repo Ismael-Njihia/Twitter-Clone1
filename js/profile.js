@@ -61,6 +61,8 @@ firebase.auth().onAuthStateChanged((user) => {
                     //console.log(progress);
                     document.getElementById("progress").innerText = wholeNumber + "% Uploading";
 
+                    document.getElementById("progressBar").style.width = wholeNumber + "%";
+
                     if (wholeNumber == 100) {
                         document.getElementById("progress").innerText = "Uploaded";
                     }
@@ -95,6 +97,7 @@ firebase.auth().onAuthStateChanged((user) => {
                 let wholeNumber1 = Math.round(progress1);
                 //console.log(progress);
                 document.getElementById("progressCover").innerText = wholeNumber1 + "% Uploading";
+                document.getElementById("progressBar1").style.width = wholeNumber + "%";
 
 
                 if (wholeNumber1 == 100) {
