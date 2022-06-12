@@ -20,8 +20,9 @@ document.getElementById("signUp").onclick = function() {
         firebase.firestore().collection("users").doc(theuserId).set({
             userEmail: email,
             userName: username,
-            userId: theuserId
-
+            userId: theuserId,
+            profileImage: "https://firebasestorage.googleapis.com/v0/b/twitter-two-copy.appspot.com/o/profile%2Fdefault.jpg?alt=media&token=3a6387c2-0f8e-4c55-818a-a63075ff823e",
+            CoverImage: "https://firebasestorage.googleapis.com/v0/b/twitter-two-copy.appspot.com/o/profile%2Fdefault.jpg?alt=media&token=3a6387c2-0f8e-4c55-818a-a63075ff823e"
         }).then(() => {
             //if the sign up is successful redirect to home page
             window.location.href = "home.html";

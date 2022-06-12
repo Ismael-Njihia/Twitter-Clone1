@@ -13,8 +13,8 @@ firebase.auth().onAuthStateChanged((user) => {
 
                 const username = doc.data().userName;
                 const bio = doc.data().bio;
-                let profileImage = doc.data().profileURL;
-                let coverImage = doc.data().coverURL;
+                let profileImage = doc.data().profileImage;
+                let coverImage = doc.data().coverImage;
 
                 document.getElementById("test").innerText = username;
                 // document.getElementById("thetittle").innerHTML = username;
@@ -48,6 +48,7 @@ firebase.auth().onAuthStateChanged((user) => {
             //upload of a profile picture!
 
         document.getElementById("upload").onclick = function() {
+
                 let profileImage = document.getElementById("profileImage").files[0];
                 //console.log(profileImage);
                 let storageRef = firebase.storage().ref();
@@ -77,7 +78,8 @@ firebase.auth().onAuthStateChanged((user) => {
                         // on the users collection we update he profile URL
 
                         firebase.firestore().collection("users").doc(userId).update({
-                            profileURL: downloadURL
+                            profileImage: downloadURL
+
                         }).then(() => {
                             window.location.reload();
                         })
@@ -112,7 +114,7 @@ firebase.auth().onAuthStateChanged((user) => {
                     // on the users collection we update he profile URL
 
                     firebase.firestore().collection("users").doc(userId).update({
-                        coverURL: downloadURL
+                        coverImage: downloadURL
                     }).then(() => {
                         window.location.reload();
                     })

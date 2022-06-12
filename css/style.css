@@ -49,7 +49,11 @@
     height: 100vh;
     border-left: 1px rgba(128, 128, 128, 0.168) solid;
     border-right: 1px rgba(128, 128, 128, 0.168) solid;
+}
+
+#allTweetsContainer {
     overflow-y: scroll;
+    height: 80vh;
 }
 
 .homeLeft {
@@ -196,6 +200,7 @@
     background-size: cover;
     height: 200px;
     width: 100%;
+    background-color: #000;
 }
 
 .mainProfImage {
@@ -254,7 +259,26 @@
     text-transform: capitalize;
 }
 
+.profilePlaceholderHome {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profilePlaceholderHome img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .moreImage {
     height: 30px;
+    cursor: pointer;
+}
+
+.likeIcon {
+    height: 20px;
     cursor: pointer;
 }
