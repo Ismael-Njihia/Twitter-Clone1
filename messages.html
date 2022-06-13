@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- icon links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://use.fontawesome.com/984f1e8b4b.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Homepage</title>
+</head>
+
+<body>
+
+
+    <section class="homeSection">
+        <div class="homeLeft">
+
+            <img src="/Login-page/images/twitter.svg" alt="">
+            <div>
+                <a href="home.html"> <i class="fa fa-home" aria-hidden="true">  Home</a></i>
+                    <a href="explore.html"> <i class="fa fa-hashtag" aria-hidden="true">  Explore</a></i>
+                        <a href="profile.html"> <i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                        <a href="messages.html"> <i class="fa fa-envelope" aria-hidden="true">  Messages</a></i>
+                            <a> <i class="fa fa-ellipsis-h" aria-hidden="true">  More</a></i>
+
+            </div>
+            <button class="btn btn-primary">Tweet</button>
+            <br>
+            <br>
+            <div class="bottomProfileCont">
+                <div class="bottomProfileCont">
+                    <div class="profilePlaceholder">
+                        <div class="bottomProfile">
+                            <p id="username"></p>
+                            <p>username</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tweetSection">
+            <div class="topTweetBox">
+                <h5>Messages</h5>
+            </div>
+
+            <div class="d-flex" style="margin-left:20px; margin-top: 20px; align-items: center; border-bottom: rgba(128, 128, 128, 0.124) 1px solid; padding-bottom: 20px;">
+                <div class="messImgCont">
+                    <img id="messageUserPic">
+                </div>
+
+                <h5 style="margin-left: 20px;" id="messageUserName"></h5>
+
+            </div>
+            <div class="allMessages">
+
+            </div>
+
+
+            <div>
+                <div class="textBox">
+                    <div class="tweetBox">
+                        <div class="profilePlaceholder"></div>
+                        <textarea name="" id="messageInput" placeholder="Your message" rows="3"></textarea>
+                    </div>
+
+                    <div class="tweetButtons">
+                        <div></div>
+                        <!--<button id="disabledBtn" class="btn btn-primary disabled">Send</button>-->
+                        <button id="messageButton" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+        <div class="homeRight">
+            <div id="showAllUsers">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+    <script src="Js/config.js"></script>
+    <script src="js/messages.js"></script>
+
+
+</body>
+
+</html>
